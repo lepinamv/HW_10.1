@@ -1,6 +1,10 @@
 def get_mask_card_number(card_number: int) -> str:
     """Маскировка номера карты в формате XXXX XX** **** XXXX"""
+    if not str(card_number).isdigit() == True:
+        raise ValueError("Номер должен состоять из 16 цифр")
     list_card_number = [int(digit) for digit in str(card_number)]
+    if len(list_card_number) != 16:
+        raise ValueError("Номер должен состоять из 16 цифр")
     mask_card_number = list_card_number[:4] + [" "] + list_card_number[4:6] + ["** **** "] + list_card_number[-4:]
     return "".join(map(str, mask_card_number))
 
@@ -22,7 +26,11 @@ def get_mask_card_number(card_number: int) -> str:
 
 def get_mask_account(account_number: int) -> str:
     """Маскировка номера счета в формате **XXXX"""
+    if not str(account_number).isdigit() == True:
+        raise ValueError("Номер должен состоять из 20 цифр")
     list_mask_account = [int(digit) for digit in str(account_number)]
+    if len(list_mask_account) != 20:
+        raise ValueError("Номер должен состоять из 20 цифр")
     mask_account = ["**"] + list_mask_account[-4:]
     return "".join(map(str, mask_account))
 
