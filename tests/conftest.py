@@ -65,3 +65,4 @@ def test_dates() -> list:
         {"id": 4, "date": "2019/01/15"},
         {"id": 5, "date": "03 Jul 2019"},
     ]
+
