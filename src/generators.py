@@ -35,7 +35,12 @@ def card_number_generator(start: int, end: int) -> Iterator[str]:
         number_str = str(number)
         card_number_str = "0" * (16 - len(number_str)) + number_str
         card_number = (
-            card_number_str[0:4] + " " + card_number_str[4:8] + " " + card_number_str[8:12] + " "
+            card_number_str[0:4]
+            + " "
+            + card_number_str[4:8]
+            + " "
+            + card_number_str[8:12]
+            + " "
             + card_number_str[12:16]
         )
         yield card_number
