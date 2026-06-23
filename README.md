@@ -28,3 +28,12 @@ Settings -> Project -> Python Interpreter -> Add -> Poetry Environment
 
 ## Лицензия:
 *Данный раздел в разработке*
+
+## Модуль generators
+
+- filter_by_currency(transactions, currency)
+Фильтрует транзакции по валюте. Возвращает генератор.
+- transaction_descriptions(transactions)
+Выдает описание транзакции. Возвращает генератор.
+- card_number_generator(start, end)
+Генератор номеров банковских карт.
