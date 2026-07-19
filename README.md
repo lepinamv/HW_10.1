@@ -37,3 +37,7 @@ Settings -> Project -> Python Interpreter -> Add -> Poetry Environment
 Выдает описание транзакции. Возвращает генератор.
 - card_number_generator(start, end)
 Генератор номеров банковских карт.
+
+## Модуль decorators
+
+- Декоратор log автоматически логирует начало и конец выполнения функции, а также ее результаты или возникшие ошибки
