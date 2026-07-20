@@ -32,6 +32,5 @@ def get_transaction_info(url):
     return transaction_info
 
 
-
 file_id = "1C0bUdTxUhck-7BoqXSR1wIEp33BH5YXy"
 print(get_transaction_info(f"https://drive.google.com/uc?export=download&id={file_id}"))
