@@ -22,13 +22,12 @@ def get_transaction_info(url):
                 print("Отсутствует содержимое")
             else:
                 transaction_info = data
-                with open("/Users/maria/my_project/new_project/data/operations.json", "w", encoding="utf-8") as f:
-                    json.dump(transaction_info, f, ensure_ascii=False, indent=2)
         except json.JSONDecodeError:
             print("Недопустимые данные JSON")
     else:
         print(f"Запрос не был успешным. {status_code} - {response.reason}")
-
+    with open("/Users/maria/my_project/new_project/data/operations.json", "w", encoding="utf-8") as f:
+        json.dump(transaction_info, f, ensure_ascii=False, indent=2)
     return transaction_info
 
 
