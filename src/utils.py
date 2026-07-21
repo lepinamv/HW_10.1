@@ -2,6 +2,8 @@ import json
 
 import requests
 
+from config import OPERATIONS_JSON
+
 
 def get_transaction_info(url):
     """Получение информации и сохранение списка транзакций"""
@@ -26,7 +28,7 @@ def get_transaction_info(url):
             print("Недопустимые данные JSON")
     else:
         print(f"Запрос не был успешным. {status_code} - {response.reason}")
-    with open("/Users/maria/my_project/new_project/data/operations.json", "w", encoding="utf-8") as f:
+    with OPERATIONS_JSON.open("w", encoding="utf-8") as f:
         json.dump(transaction_info, f, ensure_ascii=False, indent=2)
     return transaction_info
 

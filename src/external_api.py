@@ -4,6 +4,8 @@ import os
 import requests
 from dotenv import load_dotenv
 
+from config import OPERATIONS_JSON
+
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
 
@@ -53,7 +55,7 @@ def currency_conversion(transactions: list, usd_rate: float = None, eur_rate: fl
     return sum(amount)
 
 
-with open("/Users/maria/my_project/new_project/data/operations.json") as f:
+with OPERATIONS_JSON.open("r", encoding="utf-8") as f:
     t = json.load(f)
 result = currency_conversion(t)
 print(f"Общая сумма платежей {result} руб.")
