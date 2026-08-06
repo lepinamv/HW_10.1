@@ -41,3 +41,11 @@ Settings -> Project -> Python Interpreter -> Add -> Poetry Environment
 ## Модуль decorators
 
 - Декоратор log автоматически логирует начало и конец выполнения функции, а также ее результаты или возникшие ошибки
+
+## Модуль utils 
+
+- get_transaction_info - возвращает список словарей с данными о финансовых транзакциях
+
+## Модуль external_api
+
+- currency_conversion - возвращает сумму всех транзакций в рублевом эквиваленте
