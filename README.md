@@ -49,3 +49,11 @@ Settings -> Project -> Python Interpreter -> Add -> Poetry Environment
 ## Модуль external_api
 
 - currency_conversion - возвращает сумму всех транзакций в рублевом эквиваленте
+
+## Модуль transaction_reader
+
+- get_transactions_from_csv - позволяет получить список транзакций из CSV-файлов, разделитель по умолчанию ';'
+
+- get_transactions_from_csv - позволяет получить список транзакций из excel-файлов с расширениями 
+".xlsx", ".xlsm", ".xlsb", ".xls"
+
